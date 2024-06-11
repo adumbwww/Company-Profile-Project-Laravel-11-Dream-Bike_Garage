@@ -21,7 +21,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="admin">Login</a>
+      <a class="btn-getstarted" href="admin" target="_blank">Login</a>
 
     </div>
   </header>
@@ -38,12 +38,10 @@
         <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="col-xl-6 col-lg-8">
             <h2>
-              Your Journey to the Perfect Bike Starts Here
-              {{-- {{ $profile->header }} --}}
+              {{ $profile->header }}
               <span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet
-              {{-- {{ $profile->sub_header }} --}}
+              {{ $profile->sub_header }}
             </p>
           </div>
         </div>
@@ -63,33 +61,25 @@
           <div class="col-lg-6 order-2 order-lg-1 content">
             <h3>About Us</h3>
             <p class="fst-italic">
-              Welcome to Dream Bike – your ultimate destination for all things bicycles! Whether you're a seasoned cyclist or just 
-              starting your biking journey, we're here to fuel your passion with the best products and resources.
-                {{-- {{ $about->first_paragraph }} --}}
+                {{ $about->first_paragraph }}
             </p>
             <p class="fst-italic">
-              At Dream Bike, our mission is simple: to inspire and empower cyclists of all levels. We believe that biking is not 
-              just a mode of transportation but a way of life. Our goal is to provide top-notch products, reliable information, 
-              and a supportive community to help you achieve your biking dreams.
-                {{-- {{ $about->second_paragraph }} --}}
+                {{ $about->second_paragraph }}
             </p>
             <ul>
               <li><i class="bi bi-check2-all"></i>
                 <span>
-                  Quality and Reliability: We only feature products that we believe in, ensuring you get the best value for your money
-                  {{-- {{ $about->what_we_offer_1 }} --}}
+                  {{ $about->what_we_offer_1 }}
                 </span>
               </li>
               <li><i class="bi bi-check2-all"></i>
                 <span>
-                  Passion-Driven: Our team lives and breathes cycling. We understand your needs and are committed to helping you succeed.
-                  {{-- {{ $about->what_we_offer_2 }} --}}
+                  {{ $about->what_we_offer_2 }}
                 </span>
             </li>
               <li><i class="bi bi-check2-all"></i>
                 <span>
-                  Comprehensive Resource: From product reviews to maintenance tips, Dream Bike is your go-to source for all things biking.
-                  {{-- {{ $about->what_we_offer_3 }} --}}
+                  {{ $about->what_we_offer_3 }}
                 </span>
             </li>
             </ul>
@@ -276,7 +266,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="{{ asset('Gp/assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <div class="stars">
@@ -292,7 +282,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="{{ asset('Gp/assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <div class="stars">
@@ -301,54 +291,6 @@
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
                   <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>

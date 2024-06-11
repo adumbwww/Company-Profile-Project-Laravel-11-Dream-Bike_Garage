@@ -2,27 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\Profile;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
-class HomeController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $profile = Profile::first();
-        $about = About::first();
-        $testimonial = Testimonial::get()->all();
+        $data = Testimonial::orderBy('id', 'desc')->get();
 
-        return view('home.index', compact(
-            'profile',
-            'about',
-            'testimonial',
-        ));
+        return view('testimonial.index', compact('data'));
     }
 
     /**
@@ -30,7 +23,9 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Add Data";
+
+        return view('testimonial.create', compact('title'));
     }
 
     /**
@@ -38,7 +33,10 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Testimonial::create($request->all());
+        alert()->success('Succeed', 'Data Added Successfully');
+
+        return redirect()->to('testimonial');
     }
 
     /**
@@ -54,7 +52,9 @@ class HomeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $edit = Testimonial::find($id);
+
+        return view('testimonial.edit', compact('edit'));
     }
 
     /**
@@ -62,7 +62,14 @@ class HomeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Testimonial::where('id', $id)->update([
+            'name' => $request->name,
+            'testimonial' => $request->testimonial
+        ]);
+
+        alert()->success('Succeed', 'Data Edited Successfully');
+
+        return redirect()->to('testimonial');
     }
 
     /**
@@ -70,6 +77,8 @@ class HomeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Testimonial::where('id', $id)->delete();
+
+        return redirect()->to('testimonial');
     }
 }
