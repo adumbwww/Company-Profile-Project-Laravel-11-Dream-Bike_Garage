@@ -6,7 +6,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="home" class="logo d-flex align-items-center me-auto me-lg-0">
-        <h1 class="sitename">Dream Bike Motorcycle</h1>
+        <h1 class="sitename">Dream Bike Garage</h1>
         <span>.</span>
       </a>
 
@@ -37,32 +37,16 @@
 
         <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="col-xl-6 col-lg-8">
-            <h2>{{$profile->header}}<span>.</span></h2>
-            <p>{{$profile->sub_header}}</p>
+            <h2>
+              Your Journey to the Perfect Bike Starts Here
+              {{-- {{ $profile->header }} --}}
+              <span>.</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet
+              {{-- {{ $profile->sub_header }} --}}
+            </p>
           </div>
         </div>
-
-        {{-- <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <i class="bi bi-bullseye"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <i class="bi bi-fullscreen-exit"></i>
-              <h3><a href="">Sedare Perspiciatis</a></h3>
-            </div>
-          </div>
-        </div> --}}
-
       </div>
 
     </section><!-- /Hero Section -->
@@ -79,20 +63,34 @@
           <div class="col-lg-6 order-2 order-lg-1 content">
             <h3>About Us</h3>
             <p class="fst-italic">
-                {{ $about->first_paragraph }}
+              Welcome to Dream Bike – your ultimate destination for all things bicycles! Whether you're a seasoned cyclist or just 
+              starting your biking journey, we're here to fuel your passion with the best products and resources.
+                {{-- {{ $about->first_paragraph }} --}}
             </p>
             <p class="fst-italic">
-                {{ $about->second_paragraph }}
+              At Dream Bike, our mission is simple: to inspire and empower cyclists of all levels. We believe that biking is not 
+              just a mode of transportation but a way of life. Our goal is to provide top-notch products, reliable information, 
+              and a supportive community to help you achieve your biking dreams.
+                {{-- {{ $about->second_paragraph }} --}}
             </p>
             <ul>
               <li><i class="bi bi-check2-all"></i>
-                <span>{{ $about->what_we_offer_1 }}</span>
+                <span>
+                  Quality and Reliability: We only feature products that we believe in, ensuring you get the best value for your money
+                  {{-- {{ $about->what_we_offer_1 }} --}}
+                </span>
               </li>
               <li><i class="bi bi-check2-all"></i>
-                <span>{{ $about->what_we_offer_2 }}</span>
+                <span>
+                  Passion-Driven: Our team lives and breathes cycling. We understand your needs and are committed to helping you succeed.
+                  {{-- {{ $about->what_we_offer_2 }} --}}
+                </span>
             </li>
               <li><i class="bi bi-check2-all"></i>
-                <span>{{ $about->what_we_offer_3 }}</span>
+                <span>
+                  Comprehensive Resource: From product reviews to maintenance tips, Dream Bike is your go-to source for all things biking.
+                  {{-- {{ $about->what_we_offer_3 }} --}}
+                </span>
             </li>
             </ul>
           </div>

@@ -19,6 +19,7 @@ Route::post('actionLogin', [LoginController::class, 'actionLogin'])->name('actio
 
 
 Route::resource('home', HomeController::class);
+// Route::get('home', [HomeController::class, 'index']);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('profile', ProfileController::class);
 Route::resource('about', AboutController::class);
